@@ -217,6 +217,12 @@ h3 {
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
+.icon-button svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
 .icon-button:hover {
   text-decoration: none;
   background: #e9f6f8;
