@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const paperProgress = document.getElementById("paper-progress");
   const nextPaper = document.getElementById("next-paper");
   const prevPaper = document.getElementById("prev-paper");
-  const langToggle = document.getElementById("lang-toggle");
+  const langToggles = document.querySelectorAll(".lang-toggle");
   const revealTargets = document.querySelectorAll(".card, .hero, .gallery");
 
   let rerenderGallery = null;
@@ -208,7 +208,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     if (nextPaper) nextPaper.textContent = staticCopy[currentLang]?.["gallery.next"] || "Next →";
     if (prevPaper) prevPaper.textContent = staticCopy[currentLang]?.["gallery.prev"] || "← Prev";
-    if (langToggle) langToggle.textContent = currentLang === "en" ? "中文" : "EN";
+    langToggles.forEach((btn) => {
+      btn.textContent = currentLang === "en" ? "中文" : "EN";
+    });
     document.documentElement.setAttribute("lang", currentLang === "zh" ? "zh" : "en");
   };
 
@@ -326,15 +328,17 @@ document.addEventListener("DOMContentLoaded", () => {
     startTimer();
   }
 
-  if (langToggle) {
+  if (langToggles.length > 0) {
     applyStaticCopy();
-    langToggle.addEventListener("click", () => {
-      currentLang = currentLang === "en" ? "zh" : "en";
-      localStorage.setItem("lang", currentLang);
-      applyStaticCopy();
-      if (typeof rerenderGallery === "function") {
-        rerenderGallery();
-      }
+    langToggles.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        currentLang = currentLang === "en" ? "zh" : "en";
+        localStorage.setItem("lang", currentLang);
+        applyStaticCopy();
+        if (typeof rerenderGallery === "function") {
+          rerenderGallery();
+        }
+      });
     });
   } else {
     applyStaticCopy();

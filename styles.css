@@ -105,6 +105,14 @@ a:hover {
   border-color: rgba(15, 124, 141, 0.4);
 }
 
+.lang-toggle.mobile {
+  display: none;
+}
+
+.lang-toggle.desktop {
+  display: inline-flex;
+}
+
 .nav-links a {
   padding: 8px 10px;
   border-radius: 10px;
@@ -767,8 +775,15 @@ h3 {
     display: block;
   }
 
-  .lang-toggle {
-    order: 3;
+  .lang-toggle.desktop {
+    display: none;
+  }
+
+  .lang-toggle.mobile {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 6px;
   }
 
   .nav-open .nav-links {
