@@ -217,7 +217,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const isSmallScreen = window.matchMedia("(max-width: 820px)").matches;
 
   if (isSmallScreen && revealTargets.length > 0) {
-    revealTargets.forEach((el) => el.classList.add("in-view"));
+    revealTargets.forEach((el) => {
+      el.classList.add("reveal");
+      el.classList.add("in-view");
+    });
   } else if ("IntersectionObserver" in window && revealTargets.length > 0) {
     const observer = new IntersectionObserver(
       (entries) => {
