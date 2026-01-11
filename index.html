@@ -102,7 +102,15 @@
 <body>
   <header class="top-nav">
     <div class="nav-inner">
-      <a class="brand" href="#hero">Chandan Sheikder</a>
+      <div class="brand-wrapper">
+        <a href="#hero" class="brand-link">
+          <img src="logo.svg" alt="Chandan Sheikder Logo" class="nav-logo">
+          <div class="brand-info">
+            <span class="brand-name">Chandan Sheikder</span>
+            <span class="brand-role">Research Assistant | Assistant Editor</span>
+          </div>
+        </a>
+      </div>
       <nav class="nav-links" id="nav-links" aria-label="Primary">
         <a href="#about" data-i18n="nav.about">About Me</a>
 
@@ -406,7 +414,9 @@
         </div>
         <div class="patents-list">
           <div class="patent-card reveal">
-            <div class="patent-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div class="patent-brand">
+              <img src="logo/Patent.png" alt="Patent Logo" class="patent-logo-img">
+            </div>
             <div class="patent-content">
               <h3>Bio-inspired Fusion Navigation Framework</h3>
               <p class="item-meta">C. Sheikder et al. · Chinese Patent Application (Pending, 2025)</p>
@@ -620,6 +630,42 @@
         </div>
       </div>
 
+    </section>
+
+    <section class="device-showcase" id="devices">
+      <div class="section-container">
+        <div class="section-header">
+          <p class="eyebrow">Responsive</p>
+          <h2 class="section-title">Device Gallery</h2>
+          <p class="section-desc">Optimized for seamless performance across all modern devices.</p>
+        </div>
+        <div class="devices-grid">
+          <div class="device-item desktop">
+            <div class="device-frame">
+              <div class="screen-content">
+                <img src="assets/images/Bio-inspired navigation systems for robots.png" alt="Desktop view">
+              </div>
+            </div>
+            <p>Desktop Experience</p>
+          </div>
+          <div class="device-item tablet">
+            <div class="device-frame">
+              <div class="screen-content">
+                <img src="assets/images/Bio-inspired navigation systems for robots.png" alt="Tablet view">
+              </div>
+            </div>
+            <p>Tablet Optimization</p>
+          </div>
+          <div class="device-item mobile">
+            <div class="device-frame">
+              <div class="screen-content">
+                <img src="assets/images/Bio-inspired navigation systems for robots.png" alt="Mobile view">
+              </div>
+            </div>
+            <p>Mobile Native</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
