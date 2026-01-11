@@ -1852,7 +1852,7 @@ h3 {
   }
 
   .pub-header {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
