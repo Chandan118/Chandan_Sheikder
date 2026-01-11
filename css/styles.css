@@ -860,6 +860,39 @@ h3 {
   transform: translateY(0);
 }
 
+/* Contact Details Styling */
+.contact-details {
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.contact-item i {
+  color: var(--accent);
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+.contact-item a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+
 .page-footer {
   border-top: 1px solid var(--border);
   padding: 22px 24px 32px;
@@ -1028,6 +1061,15 @@ h3 {
 .social-logo.portfolio {
   color: #00A699;
 }
+
+.social-logo.researchgate {
+  color: #00CCBB;
+}
+
+.social-logo.orcid {
+  color: #A6CE39;
+}
+
 
 @media (max-width: 960px) {
   .page {
