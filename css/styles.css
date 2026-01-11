@@ -64,6 +64,12 @@ a:hover {
   padding: var(--header-height) 24px 96px;
 }
 
+@media (max-width: 768px) {
+  .page {
+    padding: var(--header-height) 16px 64px;
+  }
+}
+
 section {
   padding: var(--section-padding) 0;
 }
@@ -1459,7 +1465,7 @@ h3 {
 
 @media (max-width: 960px) {
   .page {
-    padding-top: 96px;
+    padding: 96px 16px 64px;
   }
 
   .hero {
