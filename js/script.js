@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextPaper = document.getElementById("next-paper");
   const prevPaper = document.getElementById("prev-paper");
   const langToggles = document.querySelectorAll(".lang-toggle");
-  const revealTargets = document.querySelectorAll(".card, .hero, .gallery");
+  const revealTargets = document.querySelectorAll(".card, .hero, .gallery, .reveal");
 
   let rerenderGallery = null;
 
@@ -368,10 +368,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  link.addEventListener("click", () => {
-    topNav?.classList.remove("nav-open");
-    toggle?.setAttribute("aria-expanded", "false");
-  });
+  if (navLinks.length > 0) {
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        topNav?.classList.remove("nav-open");
+        toggle?.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 });
 
 // Active state highlighting

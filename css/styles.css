@@ -871,6 +871,69 @@ h3 {
   flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    z-index: 20;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    z-index: 15;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+  }
+
+  .top-nav.nav-open .nav-links {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .top-nav.nav-open .nav-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .top-nav.nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .top-nav.nav-open .nav-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero img {
+    margin: 0 auto;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-display {
+    grid-template-columns: 1fr;
+  }
+}
+
 .footer-links {
   display: flex;
   gap: 14px;
