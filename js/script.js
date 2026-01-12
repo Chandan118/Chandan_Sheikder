@@ -412,4 +412,52 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("section[id]").forEach(section => {
     sectionObserver.observe(section);
   });
+  /* --- Lightbox Logic --- */
+  const lightbox = document.createElement("div");
+  lightbox.className = "lightbox";
+  lightbox.innerHTML = `
+    <div class="lightbox-close">&times;</div>
+    <img src="" alt="Full screen view">
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector("img");
+  const lightboxClose = lightbox.querySelector(".lightbox-close");
+
+  const openLightbox = (src, alt) => {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "Full screen view";
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden"; // Prevent scrolling
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("active");
+    document.body.style.overflow = "";
+  };
+
+  // Add click listeners to project images
+  const projectImages = document.querySelectorAll(".project-image img");
+  projectImages.forEach((img) => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", () => {
+      openLightbox(img.src, img.alt);
+    });
+  });
+
+  // Add click listener to main gallery image
+  if (galleryImage) {
+    galleryImage.style.cursor = "zoom-in";
+    galleryImage.addEventListener("click", () => {
+      openLightbox(galleryImage.src, galleryImage.alt);
+    });
+  }
+
+  lightboxClose.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("active")) closeLightbox();
+  });
 });
