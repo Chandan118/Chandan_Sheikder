@@ -67,6 +67,15 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+
+  /* Disable heavy background animation on mobile */
+  body::before {
+    animation: none;
+    opacity: 0.4;
+    filter: blur(40px);
+    /* Cheaper blur */
+  }
+
   .page {
     padding: var(--header-height) 12px 64px;
   }
