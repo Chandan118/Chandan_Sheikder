@@ -1890,16 +1890,29 @@ h3 {
 
 @media (max-width: 768px) {
   .pub-grid {
-    grid-template-columns: 1fr;
-    max-height: 600px;
-    overflow-y: auto;
-    padding: 4px;
-    padding-right: 8px;
-    /* Space for scrollbar */
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: #fff;
-    /* Ensure contrast behind scroll text */
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 16px !important;
+    padding: 20px 4px !important;
+    margin: 0 -8px !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-height: none;
+    overflow-y: visible;
+    background: transparent;
+    border: none;
+  }
+
+  .pub-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pub-card {
+    flex: 0 0 85% !important;
+    scroll-snap-align: center !important;
+    max-width: 320px !important;
+    margin-right: 0;
   }
 
   .patent-card,
