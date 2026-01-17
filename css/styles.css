@@ -1315,6 +1315,21 @@ h3 {
   display: flex;
   gap: 12px;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Mobile fix for contact buttons */
+@media (max-width: 640px) {
+  .cta-main-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .cta-main-btns .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .cta-social-row {
