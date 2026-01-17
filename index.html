@@ -703,32 +703,47 @@
           </div>
           <div class="booking-feature">
             <i class="fa-regular fa-clock"></i>
-            <div>
-              <h3>30-Minute Sessions</h3>
-              <p>Focused discussion on your research or collaboration ideas</p>
-            </div>
-          </div>
-        </div>
+            <div class="booking-calendar">
+              <!-- Booking Call-to-Action -->
+              <div class="booking-cta" style="display: flex;">
+                <div style="text-align: center; width: 100%;">
+                  <h3 style="margin-bottom: 24px; color: var(--text);">Ready to Schedule?</h3>
+                  <p
+                    style="color: var(--muted); margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto;">
+                    Contact me via email to schedule a consultation, or set up a meeting through Microsoft Teams.
+                  </p>
+                  <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:chandan@bit.edu.cn?subject=Meeting Request&body=Hi Chandan, I'd like to schedule a meeting to discuss..."
+                      class="btn primary-lg" style="min-width: 200px;">
+                      <i class="fa-regular fa-envelope"></i>
+                      <span>Email to Schedule</span>
+                    </a>
+                    <a href="https://teams.microsoft.com/l/chat/0/0?users=chandan@bit.edu.cn" target="_blank"
+                      rel="noopener noreferrer" class="btn ghost-lg" style="min-width: 200px;">
+                      <i class="fa-brands fa-microsoft"></i>
+                      <span>Message on Teams</span>
+                    </a>
+                  </div>
+                  <p style="margin-top: 24px; font-size: 14px; color: var(--muted);">
+                    📅 Typical response time: Within 24 hours
+                  </p>
+                </div>
+              </div>
 
-        <div class="booking-calendar">
-          <!-- Microsoft Bookings Calendar Integration -->
-          <!-- Replace YOUR_BOOKING_PAGE with your actual Microsoft Bookings page ID -->
-          <iframe src="https://outlook.office365.com/owa/calendar/YOUR_BOOKING_PAGE@bit.edu.cn/bookings/"
-            style="border: 0; border-radius: 16px;" width="100%" height="600" frameborder="0" scrolling="yes"
+              <!-- Future: Microsoft Bookings iframe (uncomment when ready) -->
+              <!--
+          <iframe 
+            src="https://outlook.office365.com/owa/calendar/YOUR_BOOKING_PAGE@bit.edu.cn/bookings/" 
+            style="border: 0; border-radius: 16px;" 
+            width="100%" 
+            height="600" 
+            frameborder="0"
+            scrolling="yes"
             title="Schedule a meeting with Chandan Sheikder">
           </iframe>
-
-          <!-- Alternative: Simple booking button (hidden by default) -->
-          <div class="booking-cta" style="display: none;">
-            <a href="https://outlook.office365.com/owa/calendar/YOUR_BOOKING_PAGE@bit.edu.cn/bookings/" target="_blank"
-              rel="noopener noreferrer" class="btn primary-lg">
-              <i class="fa-regular fa-calendar-plus"></i>
-              <span>Schedule a Meeting</span>
-            </a>
-            <p class="booking-note">Schedule a 30-minute consultation via Microsoft Teams</p>
+          -->
+            </div>
           </div>
-        </div>
-      </div>
     </section>
 
     <section class="card" id="experience">
