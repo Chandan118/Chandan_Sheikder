@@ -495,19 +495,6 @@ h3 {
   border-radius: 8px;
 }
 
-/* Fade in animation for hero */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Hero Section Styles */
 .hero-section {
   min-height: calc(100vh - var(--header-height));
@@ -516,14 +503,6 @@ h3 {
   padding: 40px 0;
   position: relative;
   z-index: 1;
-}
-
-.hero-content {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.hero-visual {
-  animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
 .hero-container {
